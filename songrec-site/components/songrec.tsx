@@ -3,6 +3,8 @@ import React from "react"
 import { useEffect } from "react";
 import Form from "./form";
 import Results from "./results";
+import Image from "next/image"
+import logo from "../public/songreclogo.svg";
 
 const Songrec: React.FC = () => {
     const CHARACTER_LIMIT = 32;
@@ -16,14 +18,14 @@ const Songrec: React.FC = () => {
     const onSubmit = () => {
         console.log("Submiting: " + artist);
         setIsLoading(true);
-        fetch(`${ENDPOINT}?artist=${artist}`).then((res) => res.json()).then(onResult);
+        fetch(`${ENDPOINT}?artist=${artist}`).then((res) => res.json()).then(onResult).then(console.log);
+        console.log("Received: " + artist);
     };
 
     const onResult = (data: any) => {
         setSong(data.song);
         setHasResult(true);
         setIsLoading(false);
-
     };
 
     const onReset = () => {
@@ -41,11 +43,24 @@ const Songrec: React.FC = () => {
         displayedElement = <Form artist={artist} setArtist={setArtist} onSubmit={onSubmit} isLoading={isLoading} characterLimit={CHARACTER_LIMIT} />
     }
 
+    const gradientTextStyle =
+        "text-white text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 w-fit mx-auto"
+
     return ( 
-        <>
-            <h1>Songrec!</h1>
-            {displayedElement}
-        </>
+        <div className="h-screen flex">
+            <div className="max-w-md m-auto p-2">
+                <div className="bg-slate-800 p-10 rounded-md text-white">
+                    <div className="text-center my-6">
+                        <Image className="mx-auto" src={logo} width={80} height={80} alt={""} />
+                        <h1 className={gradientTextStyle + " text-3xl font-light"}>MusiFind</h1>
+                        <div className={gradientTextStyle}>Your AI song suggester</div>
+                    </div>
+                    {displayedElement}
+                </div>
+            </div>
+        </div>
+            
+        
     );
 }
 
