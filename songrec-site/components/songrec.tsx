@@ -49,7 +49,7 @@ const Songrec: React.FC = () => {
             <div className="max-w-md m-auto">
                 <div className="bg-slate-800 p-10 rounded-md text-white">
                     <div className="text-center my-6">
-                        <img className="mx-auto mb-4" src="https://cdn.discordapp.com/attachments/804211563535663107/1164798533384282134/songreclogo.svg?ex=6544862b&is=6532112b&hm=28147037a371c3f41b9220227be4243034b017e632dccbff4ed90107ef7f133c&" width={80} height={80} alt={""} />
+                        <Image className="mx-auto mb-4" src={logo} width={80} height={80} alt={""} />
                         <h1 className={gradientTextStyle + " text-3xl font-light"}>MusiFind</h1>
                         <div className={gradientTextStyle}>Find AI-based song recommendations</div>
                     </div>
