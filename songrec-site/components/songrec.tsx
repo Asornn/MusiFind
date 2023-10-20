@@ -18,8 +18,7 @@ const Songrec: React.FC = () => {
     const onSubmit = () => {
         console.log("Submiting: " + artist);
         setIsLoading(true);
-        fetch(`${ENDPOINT}?artist=${artist}`).then((res) => res.json()).then(onResult).then(console.log);
-        console.log("Received: " + artist);
+        fetch(`${ENDPOINT}?artist=${artist}`).then((res) => res.json()).then(onResult);
     };
 
     const onResult = (data: any) => {
@@ -43,8 +42,7 @@ const Songrec: React.FC = () => {
         displayedElement = <Form artist={artist} setArtist={setArtist} onSubmit={onSubmit} isLoading={isLoading} characterLimit={CHARACTER_LIMIT} />
     }
 
-    const gradientTextStyle =
-        "text-white text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 w-fit mx-auto"
+    const gradientTextStyle = "text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 w-fit mx-auto";
 
     return ( 
         <div className="h-screen flex">
@@ -53,7 +51,7 @@ const Songrec: React.FC = () => {
                     <div className="text-center my-6">
                         <Image className="mx-auto" src={logo} width={80} height={80} alt={""} />
                         <h1 className={gradientTextStyle + " text-3xl font-light"}>MusiFind</h1>
-                        <div className={gradientTextStyle}>Your AI song suggester</div>
+                        <div className={gradientTextStyle}>Find AI-based song recommendations</div>
                     </div>
                     {displayedElement}
                 </div>

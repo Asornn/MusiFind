@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Songrec | AI Generated Song Recommendations',
+  title: 'MusiFind | AI Generated Song Recommendations',
   description: 'Generate branding snippets for your product.',
 }
 
