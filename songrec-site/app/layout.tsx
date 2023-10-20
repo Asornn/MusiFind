@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'MusiFind | AI Generated Song Recommendations',
-  description: 'Generate branding snippets for your product.',
+  description: 'Find song recommendations from an AI.',
 }
 
 export default function RootLayout({
