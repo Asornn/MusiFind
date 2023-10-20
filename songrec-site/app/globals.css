@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 html, body {
-    @apply bg-black
+    @apply bg-slate-950
 }

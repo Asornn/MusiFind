@@ -46,10 +46,10 @@ const Songrec: React.FC = () => {
 
     return ( 
         <div className="h-screen flex">
-            <div className="max-w-md m-auto p-2">
+            <div className="max-w-md m-auto">
                 <div className="bg-slate-800 p-10 rounded-md text-white">
                     <div className="text-center my-6">
-                        <Image className="mx-auto" src={logo} width={80} height={80} alt={""} />
+                        <Image className="mx-auto mb-4" src={logo} width={80} height={80} alt={""} />
                         <h1 className={gradientTextStyle + " text-3xl font-light"}>MusiFind</h1>
                         <div className={gradientTextStyle}>Find AI-based song recommendations</div>
                     </div>

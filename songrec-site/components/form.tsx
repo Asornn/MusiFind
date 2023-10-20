@@ -38,7 +38,7 @@ const Form: React.FC<FormProps> = (props) => {
                     {props.artist.length}/{props.characterLimit}
                 </div>
             </div>
-            <button className={"bg-gradient-to-r from-teal-500 to-blue-500 disabled:opacity-50 w-full p-2 rounded-md text-lg"} 
+            <button className={"bg-gradient-to-r from-teal-500 to-blue-500 disabled:opacity-50 w-full p-2 rounded-md text-lg mb-6"} 
             onClick={props.onSubmit} disabled={props.isLoading || !isArtistValid}>Submit</button>
         </>
     );

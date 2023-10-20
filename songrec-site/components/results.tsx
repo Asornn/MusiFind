@@ -24,7 +24,7 @@ const Results: React.FC<ResultsProps> = (props) => {
                 {resultSection("Your Artist", <div className="text-xl font-bold">{props.artist}</div>)}
                 {resultSection("Song Recommendation", props.song)}
             </div>
-            <button className={"bg-gradient-to-r from-teal-500 to-blue-500 disabled:opacity-50 w-full p-2 rounded-md text-lg"} onClick={props.onBack}>Back</button>
+            <button className={"bg-gradient-to-r from-teal-500 to-blue-500 disabled:opacity-50 w-full p-2 rounded-md text-lg mb-6"} onClick={props.onBack}>Back</button>
         </> 
         
     );
